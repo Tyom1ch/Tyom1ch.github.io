@@ -1,0 +1,168 @@
+@font-face {
+    font-family: 'Freedoka'; /* Имя шрифта для использования в стилях */
+    src: url('fonts/Freedoka.ttf') format('truetype'); /* Путь к файлу шрифта относительно CSS файла */
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NATS'; /* Имя шрифта для использования в стилях */
+    src: url('fonts/NATS.ttf') format('truetype'); /* Путь к файлу шрифта относительно CSS файла */
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background: #586745;
+    overflow-x: hidden;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    line-height: 0.9;
+}
+
+.main-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    position: absolute;
+    background: #2C3422;
+    width: 100vw;
+    height: 10vh;
+}
+
+.me-pic {
+    top: 24%;
+    right: 50%;
+    transform: translate(50%, -24%);
+    position: absolute;
+    transition: transform 0.3s ease-in-out; /* Плавная анимация масштаба */
+}
+
+.me-pic img {
+    width: 100%; /* Заполняем доступное место в контейнере */
+    height: auto; /* Сохраняем пропорции изображения */
+    max-width: 376px; /* Ограничиваем максимальную ширину изображения */
+    max-height: 376px; /* Ограничиваем максимальную высоту изображения */
+}
+.main-content {
+    display: flex;
+    height: 100%;
+    padding-right: 5%; /* Добавляем небольшой отступ справа для плавного позиционирования */
+}
+
+/* Дополнительные media queries для других разрешений, если необходимо */
+#el-0,
+#el-1,
+#me {
+    background: url("data/me.png"), repeat no-repeat;
+    background-position: bottom;
+    background-size: 65vh;
+    z-index: 3;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50vh;
+    height: 50vh;
+    border-radius: 376px;
+}
+
+#el-0 {
+    z-index: 1;
+    mask-image: radial-gradient(circle, transparent 0, transparent 94px, black 95px);
+}
+
+#el-1 {
+    background: #B9D991;
+    z-index: 2;
+}
+
+.main-bg {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden; /* Предотвращение появления скроллбара при масштабировании */
+}
+
+@media screen and (min-width: 1366px) {
+    #tyom1ch {
+        font-size: 128px; /* Размер шрифта для экрана 1366x768 */
+    }
+    #lw {
+        font-size: 128px; /* Размер шрифта для экрана 1366x768 */
+    }
+}
+
+.main-txt {
+    z-index: 10;
+    position: absolute;
+    top: 34vh;
+    width: 48vw; /* Измените на нужное вам значение */
+    height: auto; /* Автоматический расчет высоты, основываясь на измененной ширине */
+    font-family: 'NATS', sans-serif; /* Используем шрифт Freedoka для этого элемента */
+}
+
+#tyom1ch {
+    text-align: right;
+    font-size: 8vw; /* Начальный размер шрифта для 1366x768 (8% от ширины экрана) */
+    color: white;
+}
+
+#lw {
+    text-align: right;
+    font-size: 4vw;
+    color: white;
+}
+
+#breadc {
+    z-index: 5;
+    text-align: right;
+    font-size: 5vh;
+    color: white;
+    padding-left: 5%;
+    padding-right: 5%;
+    font-family: NATS;
+    cursor: pointer; /* Курсор при наведении */
+    transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out; /* Плавное изменение цвета и тени текста */
+}
+
+.blr-s {
+    text-shadow: 0 0 10px rgba(185, 217, 145, 0.7); /* Эффект свечения */
+}
+
+#main-ts {
+    z-index: 5;
+    text-align: right;
+    font-size: 5vh;
+    color: white;
+    padding-left: 5%;
+    padding-right: 5%;
+    font-family: NATS;
+    cursor: pointer; /* Курсор при наведении */
+    transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out; /* Плавное изменение цвета и тени текста */
+    text-shadow: 0 0 10px rgba(185, 217, 145, 0.7); /* Эффект свечения */
+}
+
+#breadc:hover {
+    color: #B9D991; /* Изменение цвета при наведении */
+    text-shadow: 0 0 10px rgba(185, 217, 145, 0.7); /* Эффект свечения */
+}
+
+#arch {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 23vw; /* Измените на нужное вам значение */
+    height: auto; /* Автоматический расчет высоты, основываясь на измененной ширине */
+}
+
+#planet {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30vw; /* Измените на нужное вам значение */
+    height: auto; /* Автоматический расчет высоты, основываясь на измененной ширине */
+}
